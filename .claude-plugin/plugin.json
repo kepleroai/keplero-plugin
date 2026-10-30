@@ -1,0 +1,15 @@
+{
+  "name": "keplero",
+  "version": "1.0.0",
+  "description": "Manage your Keplero AI agents from Claude: conversations on WhatsApp, web chat, email, Instagram, Messenger and phone, contacts, appointments, campaigns, knowledge base and analytics.",
+  "author": {
+    "name": "Keplero AI",
+    "email": "support@keplero.ai",
+    "url": "https://keplero.ai"
+  },
+  "homepage": "https://keplero.ai",
+  "privacyPolicyUrl": "https://keplero.ai/privacy-policy",
+  "repository": "https://github.com/kepleroai/keplero-plugin",
+  "license": "MIT",
+  "keywords": ["keplero", "customer-support", "whatsapp", "chatbot", "voice-agent", "crm", "appointments"]
+}

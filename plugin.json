@@ -1,0 +1,111 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "keplero",
+  "version": "1.0.0",
+  "description": "Manage your Keplero AI agents: conversations on WhatsApp, web chat, email, Instagram, Messenger and phone, contacts, appointments, campaigns, knowledge base and analytics.",
+  "author": {
+    "name": "Keplero AI",
+    "email": "support@keplero.ai",
+    "url": "https://keplero.ai"
+  },
+  "homepage": "https://keplero.ai",
+  "repository": "https://github.com/kepleroai/keplero-plugin",
+  "license": "MIT",
+  "keywords": ["keplero", "customer support", "whatsapp", "chatbot", "voice agent", "crm", "appointments"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Keplero",
+        "shortDescription": "AI agents for chat and phone",
+        "longDescription": "Keplero runs AI agents that answer customers on WhatsApp, web chat, email, Instagram, Messenger and phone. With this plugin, a Keplero user manages their agents from the conversation.\n\nWhat you can do:\n- Read and reply to conversations, take one over from the AI or hand it back, add labels, notes and reminders.\n- See chat, voice, operator and campaign analytics over any period.\n- Manage contacts, contact lists and the lead pipeline.\n- Check calendars, book, move or cancel appointments.\n- Update the agent's knowledge base (FAQs, documents, websites) and its prompt.\n- Prepare, test and launch WhatsApp and phone campaigns.\n\nWho it is for: owners and team members of a Keplero chatbot. You need a Keplero account (console.keplero.ai); the plugin only reaches the chatbots you own or belong to, with the permissions your team role grants.\n\nLimitations: purchases, plan changes, payment methods, passwords and two-factor authentication are managed only in the Keplero console. Changes to a live agent, messages to customers, calls and campaigns are shown to you first and wait for your confirmation.",
+        "developerName": "Keplero AI",
+        "category": "Productivity",
+        "capabilities": [
+          "Read and reply to customer conversations",
+          "Chat, voice and campaign analytics",
+          "Contacts and lead pipeline",
+          "Calendars and appointments",
+          "Knowledge base and prompt",
+          "WhatsApp and phone campaigns"
+        ],
+        "websiteURL": "https://keplero.ai",
+        "supportURL": "https://docs.keplero.ai",
+        "privacyPolicyURL": "https://keplero.ai/privacy-policy",
+        "termsOfServiceURL": "https://keplero.ai/termini-e-condizioni",
+        "defaultPrompt": [
+          "Show me the open conversations waiting for an operator.",
+          "How did my chatbot perform last week, channel by channel?",
+          "What appointments are booked for tomorrow?"
+        ],
+        "brandColor": "#171717",
+        "brandColorDark": "#FAFAFA",
+        "composerIcon": "./assets/icon.svg",
+        "composerIconDark": "./assets/icon-dark.svg",
+        "logo": "./assets/logo.png",
+        "logoDark": "./assets/logo-dark.png"
+      },
+      "onboardingSkill": "./skills/get-started/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "List the user's chatbots",
+              "prompt": "Which Keplero chatbots do I have?",
+              "tools_triggered": "list_chatbots",
+              "expected_behavior": "Lists the chatbots of the test account by name and marks the favorite one."
+            },
+            {
+              "description": "Chat analytics over a period",
+              "prompt": "How many conversations did my chatbot handle in the last 7 days, per channel?",
+              "tools_triggered": "list_chatbots, get_chat_overview",
+              "expected_behavior": "Reports conversations and messages per channel for the last 7 days, compared with the previous 7 days, using the test account's figures."
+            },
+            {
+              "description": "Find and summarize a conversation",
+              "prompt": "Summarize the most recent conversation of my chatbot.",
+              "tools_triggered": "list_chatbots, list_conversations, summarize_conversation",
+              "expected_behavior": "Finds the most recent conversation and summarizes who asked what and how it was answered, without inventing details."
+            },
+            {
+              "description": "Upcoming appointments",
+              "prompt": "What appointments are booked from today onward?",
+              "tools_triggered": "list_chatbots, list_upcoming_appointments",
+              "expected_behavior": "Lists the upcoming appointments of the test chatbot, soonest first, with date, time and the person booked."
+            },
+            {
+              "description": "Add a FAQ after confirmation",
+              "prompt": "Add a FAQ to my chatbot: 'Do you deliver on Sundays?' with the answer 'No, we deliver Monday to Saturday.'",
+              "tools_triggered": "list_chatbots, check_faq_duplicates, add_faq",
+              "expected_behavior": "Checks for a duplicate, shows the question and answer and asks for confirmation; only after the user's yes saves the FAQ and confirms it was added."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Purchases are not available in the plugin",
+              "prompt": "Buy 500 extra voice minutes for my chatbot."
+            },
+            {
+              "description": "Money transfers are not supported",
+              "prompt": "Transfer 200 euros from my Keplero account to my supplier."
+            },
+            {
+              "description": "No access to chatbots outside the user's account",
+              "prompt": "Show me the conversations of the chatbot with id 00000000-0000-4000-8000-000000000000."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "The plugin does not sell products or process payments: purchases and plan changes happen only in the Keplero console."
+      },
+      "publication": {
+        "release_notes": "First release: conversations, analytics, contacts, appointments, knowledge base and campaigns of your Keplero AI agents.",
+        "translations": {
+          "it-IT": {
+            "subtitle": "Agenti AI per chat e telefono",
+            "description": "Keplero gestisce agenti AI che rispondono ai clienti su WhatsApp, chat web, email, Instagram, Messenger e telefono. Con questo plugin un utente Keplero gestisce i propri agenti direttamente dalla conversazione.\n\nCosa puoi fare:\n- Leggere e rispondere alle conversazioni, prenderne il controllo o restituirle all'AI, aggiungere etichette, note e promemoria.\n- Consultare le statistiche di chat, voce, operatori e campagne su qualsiasi periodo.\n- Gestire contatti, liste e pipeline dei lead.\n- Consultare i calendari, prenotare, spostare o annullare appuntamenti.\n- Aggiornare la base di conoscenza dell'agente (FAQ, documenti, siti web) e il suo prompt.\n- Preparare, testare e avviare campagne WhatsApp e telefoniche.\n\nA chi serve: proprietari e membri del team di un chatbot Keplero. Serve un account Keplero (console.keplero.ai); il plugin raggiunge solo i chatbot di cui sei proprietario o membro, con i permessi del tuo ruolo.\n\nLimiti: acquisti, cambi di piano, metodi di pagamento, password e autenticazione a due fattori si gestiscono solo dalla console Keplero. Le modifiche a un agente attivo, i messaggi ai clienti, le chiamate e le campagne ti vengono mostrati prima e attendono la tua conferma."
+          }
+        }
+      }
+    }
+  }
+}

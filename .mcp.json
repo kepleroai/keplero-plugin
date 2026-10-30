@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "keplero": {
+      "type": "http",
+      "url": "https://console.keplero.ai/mcp"
+    }
+  }
+}
