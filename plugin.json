@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "keplero",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Manage your Keplero AI agents: conversations on WhatsApp, web chat, email, Instagram, Messenger and phone, contacts, appointments, campaigns, knowledge base and analytics.",
   "author": {
     "name": "Keplero AI",
@@ -15,7 +15,7 @@
   "extensions": {
     "com.openai": {
       "interface": {
-        "displayName": "Keplero",
+        "displayName": "Keplero AI",
         "shortDescription": "AI agents for chat and phone",
         "longDescription": "Keplero runs AI agents that answer customers on WhatsApp, web chat, email, Instagram, Messenger and phone. With this plugin, a Keplero user manages their agents from the conversation.\n\nWhat you can do:\n- Read and reply to conversations, take one over from the AI or hand it back, add labels, notes and reminders.\n- See chat, voice, operator and campaign analytics over any period.\n- Manage contacts, contact lists and the lead pipeline.\n- Check calendars, book, move or cancel appointments.\n- Update the agent's knowledge base (FAQs, documents, websites) and its prompt.\n- Prepare, test and launch WhatsApp and phone campaigns.\n\nWho it is for: owners and team members of a Keplero chatbot. You need a Keplero account (console.keplero.ai); the plugin only reaches the chatbots you own or belong to, with the permissions your team role grants.\n\nLimitations: purchases, plan changes, payment methods, passwords and two-factor authentication are managed only in the Keplero console. Changes to a live agent, messages to customers, calls and campaigns are shown to you first and wait for your confirmation.",
         "developerName": "Keplero AI",

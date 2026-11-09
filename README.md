@@ -1,6 +1,6 @@
-![Keplero](assets/logo.png)
+![Keplero AI](assets/logo.png)
 
-# Keplero
+# Keplero AI
 
 Keplero runs AI agents that answer customers on WhatsApp, web chat, email, Instagram, Messenger and phone. This plugin connects Claude, ChatGPT and Codex to your Keplero account, so you can manage your agents from the conversation:
 
