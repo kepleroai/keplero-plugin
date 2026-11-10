@@ -10,7 +10,10 @@
             "type": "oauth",
             "client": {
               "mode": "dcr"
-            }
+            },
+            "baseScopes": ["email"],
+            "defaultScopes": ["email"],
+            "oidcEnabled": false
           }
         }
       }
