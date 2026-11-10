@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "keplero",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Manage your Keplero AI agents: conversations on WhatsApp, web chat, email, Instagram, Messenger and phone, contacts, appointments, campaigns, knowledge base and analytics.",
   "author": {
     "name": "Keplero AI",

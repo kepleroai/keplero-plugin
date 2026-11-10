@@ -3,7 +3,17 @@
   "mcpServers": {
     "keplero": {
       "type": "streamable-http",
-      "url": "https://console.keplero.ai/mcp"
+      "url": "https://console.keplero.ai/mcp",
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "type": "oauth",
+            "client": {
+              "mode": "dcr"
+            }
+          }
+        }
+      }
     }
   }
 }
